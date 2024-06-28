@@ -1,6 +1,6 @@
 # Python Tutorial for Cool People
 
-Miss Fritters is currently a test of Llama3 using Ollama and Coqui TTS.
+This is a basic Python tutorial meant to teach you the basics to get your hands dirty.
 
 ## Installation
 
