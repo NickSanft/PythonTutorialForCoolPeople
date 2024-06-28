@@ -11,4 +11,8 @@ print(bs.prettify())
 
 """
 You got it running!
+
+Do you see that odd part on line 7? BeautifulSoup is not actually a function but instead an Object. 
+
+We will talk about that next!
 """
