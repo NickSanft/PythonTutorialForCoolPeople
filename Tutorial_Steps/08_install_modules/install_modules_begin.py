@@ -25,4 +25,5 @@ print(raw_html)
 bs = bs4.BeautifulSoup(raw_html, 'html.parser')
 
 print("Pretty HTML")
+print(type(bs))
 print(bs.prettify())
