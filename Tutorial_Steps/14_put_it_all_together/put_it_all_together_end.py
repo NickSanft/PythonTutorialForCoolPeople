@@ -1,17 +1,8 @@
 """
 
-Objectives:
-    1) Import any missing modules.
-    2) Update Calculator to inherit from Machine.
-    3) Add a multiply_numbers function to Calculator.
-    4) Fix the Calculator code so that all tests pass. Please do not update the tests themselves.
-    5) Add tests for negative numbers for add, subtract, multiply, and divide.
+You did it, I am so proud of you!
 
-We have made it to the end of our beginner's Python tutorial!!! This will be a culmination of everything you have
-learned throughout this course. Go slowly, execute the tests, and Google the crap out of everything you can.
-
-***Disclaimer***
-Please DO NOT change the tests, these should all work. The Calculator code is all that needs to change
+At this point, you know all the basics of Python. All that remains is learning and an absurd amount of Google.
 
 """
 import unittest
@@ -24,20 +15,29 @@ class Machine:
         self.name = name
 
 
-class Calculator:
-    calculator_brand = 2
+class Calculator(Machine):
+    calculator_brand = "ci"
 
     def add_numbers(self, a: int, b: int):
-        return a + b
+        if type(a) is not int:
+            raise ValueError("a must be an integer")
+        elif type(b) is not int:
+            raise ValueError("b must be an integer")
+        else:
+            return a + b
 
     def subtract_numbers(self, a: int, b: int):
-        result = str(a - b)
+        result = a - b
         return result
 
-    # multiply numbers should go here
+    def multiply_numbers(self, a: int, b: int):
+        return a * b
 
     def divide_numbers(self, a: int, b: int):
-        return a / b
+        try:
+            return a / b
+        except ZeroDivisionError:
+            raise ValueError("Cannot divide by zero")
 
     def get_wiki_page(self):
         result = wikipedia.page("Calculator")
@@ -45,7 +45,7 @@ class Calculator:
 
 
 class TestCalculatorMethods(unittest.TestCase):
-    calc = Calculator()
+    calc = Calculator("Dave")
 
     # general tests
     def test_get_wiki_page_works(self):
