@@ -22,7 +22,7 @@ Animal.
 Let's take a look specifically at the Dog class now. I have added a function called "bark", but we still have all of our
 Animal functions too!
 
-Now, trying making your own Human class that inherits from Animal and make your own cool functions.  
+Now, trying making your own Human class that inherits from Animal and make your own cool functions.
 """
 
 
