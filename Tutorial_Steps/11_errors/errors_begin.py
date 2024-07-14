@@ -11,8 +11,10 @@ That's where try-except comes in! (try-catch in a lot of other languages).
 In the try statement, you can attempt to do something, and in the except you can pass in a specific type of error to
 "catch". Instead of Python throwing an error and unraveling all reality, you can handle it yourself however you want.
 
-Lastly, in the "finally" statement, this will always happen whether or not you have an error. It is useful if you need
+Lastly, in the "finally" statement, this will always happen whether you have an error or not. It is useful if you need
 to make sure something is ALWAYS done.
+
+Alright, go for the objective. Make sure to read the error type that is being printed in the console, it's a huge help.
 
 ***Disclaimer***
 USE THIS SPARINGLY. If you use this to cover issues you don't want to deal with, you will cause future pain on others.
