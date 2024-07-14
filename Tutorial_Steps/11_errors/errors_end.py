@@ -8,15 +8,17 @@ of programming, especially when it involves more than one person.
 """
 
 
-def add_numbers(a, b):
-    total = None
-    try:
-        total = a + b
-    except TypeError:
-        print("One of these is not a number, dude - {} and {}".format(a, b))
-    finally:
+class Calculator:
+    def add_numbers(self, a, b):
+        total = None
+        try:
+            total = a + b
+        except TypeError:
+            print("One of these is not a number, dude - {} and {}".format(a, b))
         return total
 
 
-print(add_numbers("x", 2))
-print(add_numbers(3, 2))
+calc = Calculator()
+print(calc.add_numbers("x", 2))
+print(calc.add_numbers(3, 2))
+

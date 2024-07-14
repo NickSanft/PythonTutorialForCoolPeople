@@ -11,9 +11,6 @@ That's where try-except comes in! (try-catch in a lot of other languages).
 In the try statement, you can attempt to do something, and in the except you can pass in a specific type of error to
 "catch". Instead of Python throwing an error and unraveling all reality, you can handle it yourself however you want.
 
-Lastly, in the "finally" statement, this will always happen whether you have an error or not. It is useful if you need
-to make sure something is ALWAYS done.
-
 Alright, go for the objective. Make sure to read the error type that is being printed in the console, it's a huge help.
 
 ***Disclaimer***
@@ -23,15 +20,16 @@ Usually, this will end up being you many years later.
 """
 
 
-def add_numbers(a, b):
-    total = None
-    try:
-        total = a + b
-    except IOError:
-        print("One of these is not a number, dude - {} and {}".format(a, b))
-    finally:
+class Calculator:
+    def add_numbers(self, a, b):
+        total = None
+        try:
+            total = a + b
+        except ValueError:
+            print("One of these is not a number, dude - {} and {}".format(a, b))
         return total
 
 
-print(add_numbers("x", 2))
-print(add_numbers(3, 2))
+calc = Calculator()
+print(calc.add_numbers("x", 2))
+print(calc.add_numbers(3, 2))
